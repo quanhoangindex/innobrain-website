@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import ReactPlayer from "react-player";
 import Button from "../ui/Button";
 import { ArrowRight, ArrowDownRight, Airplay, Play } from "lucide-react";
 import "./PlatformHero.css";
+import DotGrid from "../effects/DotGrid";
 
 const IMG_TRUSTED =
     "https://res.cloudinary.com/dp90xtgcp/image/upload/v1777846473/TrustedAI_cwi9ri.png";
@@ -21,7 +21,19 @@ function PlatformHero() {
             <section className="platform-hero">
                 <div className="platform-hero__inner">
                     {/* Dotted grid*/}
-                    <div className="platform-hero__bg" aria-hidden="true" />
+                    <div className="platform-hero__bg">
+                        <DotGrid
+                            dotSize={3}
+                            gap={15}
+                            baseColor="#dedede"
+                            activeColor="#2563EB"
+                            proximity={120}
+                            shockRadius={250}
+                            shockStrength={5}
+                            resistance={750}
+                            returnDuration={1.5}
+                        />
+                    </div>
 
                     <div className="platform-hero__content">
                         <div className="platform-hero__tag">

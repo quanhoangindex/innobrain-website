@@ -22,13 +22,6 @@
 .platform-hero__bg {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(
-        circle,
-        var(--border-default) 1px,
-        transparent 1px
-    );
-    background-size: 20px 20px;
-    pointer-events: none;
     z-index: 0;
 }
 
