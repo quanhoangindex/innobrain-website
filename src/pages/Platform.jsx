@@ -1,5 +1,10 @@
+import PlatformHero from "../components/sections/PlatformHero";
 function Platform() {
-    return <div>Platform</div>;
+    return (
+        <main>
+            <PlatformHero />
+        </main>
+    );
 }
 
 export default Platform;
