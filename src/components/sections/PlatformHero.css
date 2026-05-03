@@ -1,0 +1,233 @@
+.platform-hero {
+    padding: 0 var(--space-20);
+    background: var(--bg-page);
+}
+
+.platform-hero__inner {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    border-left: 1px solid var(--border-default);
+    border-right: 1px solid var(--border-default);
+    border-bottom: 1px solid var(--border-default);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-20) var(--space-20) var(--space-72);
+    overflow: hidden;
+}
+
+/* Dotted */
+.platform-hero__bg {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+        circle,
+        var(--border-default) 1px,
+        transparent 1px
+    );
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Content above bg */
+.platform-hero__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+    max-width: 580px;
+    width: 100%;
+}
+
+/* Tag pill */
+.platform-hero__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: var(--bg-page);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-full);
+    padding: var(--space-1) var(--space-3);
+    font-family: var(--font-roboto);
+    font-size: var(--text-sm);
+    font-weight: var(--fw-regular);
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+/* Heading block */
+.platform-hero__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    text-align: center;
+    width: 100%;
+}
+
+.platform-hero__title {
+    font-family: var(--font-sans);
+    font-size: var(--text-5xl);
+    line-height: var(--lh-5xl);
+    font-weight: var(--fw-bold);
+    color: var(--text-primary);
+    margin: 0;
+    text-align: center;
+}
+
+.platform-hero__desc {
+    font-family: var(--font-roboto);
+    font-size: var(--text-base);
+    line-height: var(--lh-base);
+    font-weight: var(--fw-regular);
+    color: var(--text-secondary);
+    margin: 0;
+    text-align: center;
+}
+
+/* Awards*/
+.platform-hero__awards-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: var(--space-4);
+}
+
+.platform-hero__awards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-8);
+    border: 1px solid var(--border-default);
+    background: var(--bg-page);
+}
+
+.platform-hero__corner {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--border-strong);
+    background: var(--border-default);
+}
+
+.platform-hero__corner--tl {
+    top: -5px;
+    left: -5px;
+}
+.platform-hero__corner--tr {
+    top: -5px;
+    right: -5px;
+}
+.platform-hero__corner--bl {
+    bottom: -5px;
+    left: -5px;
+}
+.platform-hero__corner--br {
+    bottom: -5px;
+    right: -5px;
+}
+
+.platform-hero__awards-label {
+    font-family: var(--font-roboto);
+    font-size: var(--text-xs);
+    line-height: var(--lh-xs);
+    color: var(--text-tertiary);
+    text-align: center;
+    margin: 0;
+}
+
+.platform-hero__awards-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+}
+
+.platform-hero__award-img {
+    height: 68px;
+    width: auto;
+    object-fit: contain;
+}
+
+.platform-hero__scroll-hint {
+    margin-top: var(--space-20);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-family: var(--font-mono, "Cascadia Code");
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+}
+
+/* VIDEO SECTION */
+.platform-video {
+    padding: 0 var(--space-20);
+    background: var(--bg-page);
+}
+
+.platform-video__inner {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    border-left: 1px solid var(--border-default);
+    border-right: 1px solid var(--border-default);
+    border-bottom: 1px solid var(--border-default);
+    height: 562px;
+    overflow: visible;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Dotted grid background */
+.platform-video__bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.platform-video__bg::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* fills the entire parent */
+    background-image: repeating-linear-gradient(
+        315deg,
+        var(--border-default) 0px,
+        var(--border-default) 1px,
+        transparent 1px,
+        transparent 15px
+    );
+    opacity: 0.5;
+}
+
+/* iPad floats up*/
+.platform-video__float {
+    position: relative;
+    z-index: 1;
+    margin-top: -242px;
+}
+
+.platform-video__device {
+    position: relative;
+    width: 1000px;
+}
+
+.platform-video__device-frame {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    cursor: pointer;
+    transition: opacity 150ms ease;
+}
+
+.platform-video__device-frame:hover {
+    opacity: 0.8;
+}

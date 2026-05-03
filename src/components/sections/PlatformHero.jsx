@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowDownRight, Airplay } from "lucide-react";
+import ReactPlayer from "react-player";
+import Button from "../ui/Button";
+import { ArrowRight, ArrowDownRight, Airplay, Play } from "lucide-react";
 import "./PlatformHero.css";
 
-const IMG_SKAPA =
-    "https://www.figma.com/api/mcp/asset/793b62e1-7dee-4e0e-ad1b-37f4ef1607ec";
 const IMG_TRUSTED =
-    "https://www.figma.com/api/mcp/asset/1b43517d-409b-4548-a99d-ef29ff0f60d6";
+    "https://res.cloudinary.com/dp90xtgcp/image/upload/v1777846473/TrustedAI_cwi9ri.png";
+
 const IMG_IVA =
-    "https://www.figma.com/api/mcp/asset/79ea84d7-f113-4dd5-805b-7636cd605cdf";
+    "https://res.cloudinary.com/dp90xtgcp/image/upload/v1777846472/IvaTop100_w8bnrc.png";
+const IMG_SKAPA =
+    "https://res.cloudinary.com/dp90xtgcp/image/upload/v1777846473/SkapaPrize_d8safy.png";
 
 const VIDEO_SRC =
     "https://innobraintech.com/wp-content/uploads/2025/08/Platform-Intro-New-2025.mp4";
@@ -22,7 +25,11 @@ function PlatformHero() {
 
                     <div className="platform-hero__content">
                         <div className="platform-hero__tag">
-                            <Airplay size={12} />
+                            <Airplay
+                                size={12}
+                                strokeWidth={3}
+                                color="var(--brand-primary)"
+                            />
                             <span>InnoBrain Platform</span>
                         </div>
 
@@ -44,9 +51,10 @@ function PlatformHero() {
                             </p>
                         </div>
 
-                        <Link to="/contact" className="platform-hero__btn">
-                            Book a Free Demo
-                            <ArrowRight size={16} />
+                        <Link to="/contact">
+                            <Button iconTrailing={<ArrowRight size={16} />}>
+                                Book a Free Demo
+                            </Button>
                         </Link>
 
                         {/* Awards & Recognition */}
@@ -76,17 +84,19 @@ function PlatformHero() {
                                 <div className="platform-hero__awards-logos">
                                     <img
                                         src={IMG_SKAPA}
-                                        alt="SKAPA Prize 2019"
+                                        alt="Skapa prize"
                                         className="platform-hero__award-img"
                                     />
+
                                     <img
                                         src={IMG_TRUSTED}
-                                        alt="Trusted AI Startup"
+                                        alt="Trusted AI Start Up"
                                         className="platform-hero__award-img"
                                     />
+
                                     <img
                                         src={IMG_IVA}
-                                        alt="IVA TOP 100"
+                                        alt="Iva Top 100"
                                         className="platform-hero__award-img"
                                     />
                                 </div>
@@ -106,21 +116,15 @@ function PlatformHero() {
                     <div className="platform-video__bg" aria-hidden="true" />
 
                     <div className="platform-video__float">
-                        <div className="platform-video__ipad">
-                            <div
-                                className="platform-video__ipad-camera"
-                                aria-hidden="true"
-                            />
-                            <div className="platform-video__ipad-screen">
-                                <video
-                                    src={VIDEO_SRC}
-                                    className="platform-video__video"
-                                    autoPlay
-                                    muted
-                                    loop
-                                    playsInline
+                        <div className="platform-video__device">
+                            <a href={VIDEO_SRC}>
+                                <img
+                                    src="https://res.cloudinary.com/dp90xtgcp/image/upload/v1777848092/Ipad-Mockup_jkbzj4.jpg"
+                                    alt="Watch platform overview"
+                                    className="platform-video__device-frame"
+                                    aria-hidden="true"
                                 />
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
