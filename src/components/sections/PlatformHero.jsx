@@ -131,7 +131,7 @@ function PlatformHero() {
                         <div className="platform-video__device">
                             <a href={VIDEO_SRC}>
                                 <img
-                                    src="https://res.cloudinary.com/dp90xtgcp/image/upload/v1777848092/Ipad-Mockup_jkbzj4.jpg"
+                                    src="https://res.cloudinary.com/dp90xtgcp/image/upload/v1777894681/Ipad-Mockup_ywfevy.png"
                                     alt="Watch platform overview"
                                     className="platform-video__device-frame"
                                     aria-hidden="true"
