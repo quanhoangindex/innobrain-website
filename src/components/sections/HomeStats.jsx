@@ -124,7 +124,7 @@ function HomeStats() {
                                     from={0}
                                     to={stat.to}
                                     decimals={stat.decimals}
-                                    duration={3.5}
+                                    duration={2.5}
                                     delay={0}
                                 />
                                 {stat.suffix && <span>{stat.suffix}</span>}
