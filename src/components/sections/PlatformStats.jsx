@@ -5,6 +5,7 @@ import {
     TowerControl,
     Component,
 } from "lucide-react";
+import CountUp from "../effects/CountUp";
 
 import "./PlatformStats.css";
 
@@ -22,7 +23,10 @@ function PlatformStats() {
             <div className="pstats__inner">
                 <div className="pstats__cards">
                     <div className="pstats__card">
-                        <p className="pstats__value">2s</p>
+                        <p className="pstats__value">
+                            <CountUp to={2} duration={1} />
+                            <span>s</span>
+                        </p>
                         <div className="pstats__footer">
                             <p className="pstats__desc">
                                 Live update interval with real-time EEG data
@@ -33,7 +37,9 @@ function PlatformStats() {
                     </div>
 
                     <div className="pstats__card">
-                        <p className="pstats__value">3</p>
+                        <p className="pstats__value">
+                            <CountUp to={3} duration={1}></CountUp>
+                        </p>
                         <div className="pstats__footer">
                             <div className="pstats__desc">
                                 <p>
@@ -51,7 +57,10 @@ function PlatformStats() {
                     </div>
 
                     <div className="pstats__card">
-                        <p className="pstats__value">10+</p>
+                        <p className="pstats__value">
+                            <CountUp to={10} duration={1}></CountUp>
+                            <span>+</span>
+                        </p>
                         <div className="pstats__footer">
                             <p className="pstats__desc">
                                 Cognitive states detected — From focus to

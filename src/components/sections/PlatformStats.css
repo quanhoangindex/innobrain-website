@@ -39,7 +39,7 @@
 
 
 
-/* ── Big stat number ── */
+/*  Big stat number  */
 .pstats__value {
     font-family: var(--font-sans);
     font-size: var(--text-7xl);
@@ -49,7 +49,7 @@
     margin: 0;
 }
 
-/* ── Bottom row: desc + icon(s) ── */
+/*  desc + icon */
 .pstats__footer {
     display: flex;
     align-items: flex-end;
