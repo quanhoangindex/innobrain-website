@@ -4,6 +4,7 @@ import Button from "../ui/Button";
 import { Check } from "lucide-react";
 import { motion } from "framer-motion";
 
+
 const checkItems = [
     "Reads cognitive state in under 200ms",
     "A.I Analyze in real time",
@@ -19,7 +20,11 @@ function ValueProp() {
                         className="value-prop__title heading-1"
                         initial={{ opacity: 0, y: 24 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        transition={{
+                            duration: 0.75,
+                            delay: 0.36,
+                            ease: "easeOut",
+                        }}
                         viewport={{ once: true }}>
                         A platform that reads cognitive state from{" "}
                         <span className="eeg-tooltip-wrapper">
