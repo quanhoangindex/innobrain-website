@@ -1,5 +1,6 @@
 import { div } from "three/tsl";
 import "./HomeTrustpartner.css";
+import { motion } from "framer-motion";
 
 /* Partner logo - Get url from cloudinary */
 const logos = [
@@ -51,21 +52,36 @@ function HomeTrustpartner() {
             <div className="trust__inner">
                 {/* Label Row */}
                 <div className="trust__label-row">
-                    <div className="trust__label text-lg-bold">
+                    <motion.div
+                        className="trust__label text-lg-bold"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        viewport={{ once: true }}>
                         TRUSTED WITH THE BEST
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* logo grid */}
                 <div className="trust__grid">
                     {logos.map((logo) => (
-                        <div key={logo.alt} className="trust__cell">
+                        <motion.div
+                            key={logo.alt}
+                            className="trust__cell"
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.55,
+                                delay: 0.36,
+                                ease: "easeOut",
+                            }}
+                            viewport={{ once: true }}>
                             <img
                                 src={logo.src}
                                 alt={logo.alt}
                                 className="trust__logo"
                             />
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
