@@ -2,6 +2,7 @@ import "./ValueProp.css";
 import { MessageCircleQuestionMark } from "lucide-react";
 import Button from "../ui/Button";
 import { Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 const checkItems = [
     "Reads cognitive state in under 200ms",
@@ -14,7 +15,12 @@ function ValueProp() {
             <div className="value-prop__inner">
                 {/* left */}
                 <div className="value-prop__copy">
-                    <h2 className="value-prop__title heading-1">
+                    <motion.h2
+                        className="value-prop__title heading-1"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        viewport={{ once: true }}>
                         A platform that reads cognitive state from{" "}
                         <span className="eeg-tooltip-wrapper">
                             <span className="value-prop__highlight">
@@ -34,12 +40,31 @@ function ValueProp() {
                             </span>
                         </span>
                         and alerts supervisors before performance fails
-                    </h2>
+                    </motion.h2>
 
                     <div className="value-prop__cta-group">
                         {/* scroll down to How it works */}
-                        <Button size="xl">Learn how it works</Button>
-                        <ul className="value-prop__checklist">
+                        <motion.div
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.55,
+                                delay: 0.36,
+                                ease: "easeOut",
+                            }}
+                            viewport={{ once: true }}>
+                            <Button size="xl">Learn how it works</Button>
+                        </motion.div>
+                        <motion.ul
+                            className="value-prop__checklist"
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.65,
+                                delay: 0.5,
+                                ease: "easeOut",
+                            }}
+                            viewport={{ once: true }}>
                             {checkItems.map((item) => (
                                 <li
                                     key={item}
@@ -50,17 +75,26 @@ function ValueProp() {
                                     </span>
                                 </li>
                             ))}
-                        </ul>
+                        </motion.ul>
                     </div>
                 </div>
 
                 {/* Image */}
-                <div className="value-prop__visual">
+                <motion.div
+                    className="value-prop__visual"
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                        duration: 0.65,
+                        delay: 0.36,
+                        ease: "easeOut",
+                    }}
+                    viewport={{ once: true }}>
                     <img
                         src="https://res.cloudinary.com/dp90xtgcp/image/upload/v1777371157/ValueProp_yohbds.png"
                         alt=""
                     />
-                </div>
+                </motion.div>
             </div>
         </section>
     );

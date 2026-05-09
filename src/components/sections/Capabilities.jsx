@@ -1,4 +1,5 @@
 import "./Capabilities.css";
+import { motion } from "framer-motion";
 
 const iconAlert = (
     <svg
@@ -123,23 +124,46 @@ function Capabilities() {
         <section className="capabilities">
             <div className="capabilities__inner">
                 {/* Label bar */}
-                <div className="capabilities__label-bar">
+                <motion.div
+                    className="capabilities__label-bar"
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    viewport={{ once: true }}>
                     <span className="capabilities__label">
                         TURN DATA INTO DECISION
                     </span>
                     <span className="capabilities__label">/ SEE DEEPER</span>
-                </div>
+                </motion.div>
 
                 <div className="capabilities__container">
                     {/*sticky heading */}
                     <div className="capabilities__sticky">
-                        <h2 className="capabilities__title">
+                        <motion.h2
+                            className="capabilities__title"
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.5,
+                                delay: 0.3,
+                                ease: "easeOut",
+                            }}
+                            viewport={{ once: true }}>
                             Platform Capabilities
-                        </h2>
-                        <p className="capabilities__subtitle">
+                        </motion.h2>
+                        <motion.p
+                            className="capabilities__subtitle"
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.55,
+                                delay: 0.4,
+                                ease: "easeOut",
+                            }}
+                            viewport={{ once: true }}>
                             Everything you need to monitor, understand and act
                             on cognitive performance
-                        </p>
+                        </motion.p>
                     </div>
 
                     {/* Right cards */}

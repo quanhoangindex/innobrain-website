@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Button from "../ui/Button";
 import "./MainCTA.css";
+import BlurText from "../effects/BlurText";
+import { motion } from "framer-motion";
 
+const handleAnimationComplete = () => {
+    console.log("Animation completed!");
+};
 
 const imgBg =
     "https://res.cloudinary.com/dp90xtgcp/image/upload/v1777676051/CTAgradient_vpbvot.png";
@@ -11,14 +16,21 @@ function MainCTA() {
     return (
         <section className="cta">
             <div className="cta__inner">
-
                 <div className="gradient__bg">
                     <img src={imgBg} alt="" />
                 </div>
 
                 {/* Content */}
                 <div className="cta__content">
-                    <div className="cta__logo-wrap">
+                    <motion.div
+                        className="cta__logo-wrap"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.5,
+                            ease: "easeOut",
+                        }}
+                        viewport={{ once: true }}>
                         <svg
                             width="65"
                             height="64"
@@ -46,20 +58,46 @@ function MainCTA() {
                                 fill="#EFF6FF"
                             />
                         </svg>
-                    </div>
+                    </motion.div>
 
                     <div className="cta__text">
-                        <h2 className="cta__title">
+                        <BlurText
+                            text="Ready to see it in action?"
+                            delay={200}
+                            animateBy="words"
+                            direction="top"
+                            onAnimationComplete={handleAnimationComplete}
+                            className="cta__title"
+                        />
+                        {/* <h2 className="cta__title">
                             Ready to see it in action?
-                        </h2>
-                        <p className="cta__subtitle">
+                        </h2> */}
+                        <motion.p
+                            className="cta__subtitle"
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.6,
+                                delay: 0.45,
+                                ease: "easeOut",
+                            }}
+                            viewport={{ once: true }}>
                             Book a free 30-minute demo.
                             <br />
                             No commitment, no hard sell.
-                        </p>
+                        </motion.p>
                     </div>
 
-                    <div className="cta__actions">
+                    <motion.div
+                        className="cta__actions"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.65,
+                            delay: 0.55,
+                            ease: "easeOut",
+                        }}
+                        viewport={{ once: true }}>
                         <Link to="/contact">
                             <Button
                                 size="lg"
@@ -74,7 +112,7 @@ function MainCTA() {
                                 Watch Overview
                             </Button>
                         </Link>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

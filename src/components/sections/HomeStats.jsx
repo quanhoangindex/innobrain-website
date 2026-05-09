@@ -1,5 +1,6 @@
 import "./HomeStats.css";
 import CountUp from "../effects/CountUp";
+import { motion } from "framer-motion";
 
 const partners = [
     {
@@ -64,19 +65,42 @@ function HomeStats() {
             <div className="stats__inner">
                 <div className="stats__copy">
                     <div className="stats__heading">
-                        <h2 className="stats__title">
+                        <motion.h2
+                            className="stats__title"
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
+                            viewport={{ once: true }}>
                             Backed by a decade of funded research
-                        </h2>
-                        <p className="stats__subtitle">
+                        </motion.h2>
+                        <motion.p
+                            className="stats__subtitle"
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.5,
+                                delay: 0.3,
+                                ease: "easeOut",
+                            }}
+                            viewport={{ once: true }}>
                             Validated by Sweden's national innovation agency and{" "}
                             <br />
                             trusted by aerospace, defence, and transport
                             operators.
-                        </p>
+                        </motion.p>
                     </div>
 
                     {/* Tech */}
-                    <div className="stats__partners-wrapper">
+                    <motion.div
+                        className="stats__partners-wrapper"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.55,
+                            delay: 0.45,
+                            ease: "easeOut",
+                        }}
+                        viewport={{ once: true }}>
                         <div className="stats__partners">
                             {/* Corner */}
                             <span
@@ -111,7 +135,7 @@ function HomeStats() {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Stat cards */}

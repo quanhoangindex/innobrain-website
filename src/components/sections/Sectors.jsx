@@ -7,8 +7,8 @@ import {
     CircleUser,
 } from "lucide-react";
 import "./Sectors.css";
+import { motion } from "framer-motion";
 
-/* Sector background images — replace with your actual URLs */
 const sectors = [
     {
         id: "mobility",
@@ -65,18 +65,52 @@ function Sectors() {
         <section className="sectors">
             <div className="sectors__inner">
                 {/* Top label bar */}
-                <div className="sectors__label-bar">
-                    <span className="sectors__label">POWERFUL PLATFORM</span>
-                    <span className="sectors__label">/ DATA · BUSINESS</span>
-                </div>
+                <motion.div className="sectors__label-bar">
+                    <motion.span
+                        className="sectors__label"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        viewport={{ once: true }}>
+                        POWERFUL PLATFORM
+                    </motion.span>
+                    <motion.span
+                        className="sectors__label"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        viewport={{ once: true }}>
+                        / DATA · BUSINESS
+                    </motion.span>
+                </motion.div>
 
                 {/* Heading */}
                 <div className="sectors__heading">
-                    <h2 className="sectors__title">Who is InnoBrain for?</h2>
-                    <p className="sectors__subtitle">
+                    <motion.h2
+                        className="sectors__title"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.55,
+                            delay: 0.45,
+                            ease: "easeOut",
+                        }}
+                        viewport={{ once: true }}>
+                        Who is InnoBrain for?
+                    </motion.h2>
+                    <motion.p
+                        className="sectors__subtitle"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.65,
+                            delay: 0.65,
+                            ease: "easeOut",
+                        }}
+                        viewport={{ once: true }}>
                         We build for teams where human performance is
                         mission-critical.
-                    </p>
+                    </motion.p>
                 </div>
 
                 {/* Grid row: stripe | cards | stripe */}
@@ -87,7 +121,9 @@ function Sectors() {
                     {/* Sector cards */}
                     <div className="sectors__grid">
                         {sectors.map((sector) => (
-                            <div key={sector.id} className="sectors__card">
+                            <motion.div
+                                key={sector.id}
+                                className="sectors__card">
                                 {/* Background image — fades in on hover */}
                                 <div className="sectors__card-bg">
                                     <img src={sector.img} alt="" />
@@ -95,20 +131,20 @@ function Sectors() {
                                 </div>
 
                                 {/* Icon */}
-                                <div className="sectors__card-icon">
+                                <motion.div className="sectors__card-icon">
                                     {sector.icon}
-                                </div>
+                                </motion.div>
 
                                 {/* Text */}
-                                <div className="sectors__card-text">
+                                <motion.div className="sectors__card-text">
                                     <h3 className="sectors__card-title">
                                         {sector.title}
                                     </h3>
                                     <p className="sectors__card-desc">
                                         {sector.description}
                                     </p>
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
                         ))}
                     </div>
 
