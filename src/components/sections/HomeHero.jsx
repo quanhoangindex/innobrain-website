@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 import Button from "../ui/Button";
 import { ArrowRight } from "lucide-react";
 import LiquidEther from "../effects/LiquidEther";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 24 },
+    show: { opacity: 1, y: 0 },
+    // animation reference from framer-motion
+};
 
 function HomeHero() {
     return (
@@ -33,7 +40,16 @@ function HomeHero() {
                 </div>
                 <div className="hero__content">
                     {/* tag pill */}
-                    <div className="hero__tag">
+                    <motion.div
+                        className="hero__tag"
+                        variants={fadeUp}
+                        initial="hidden"
+                        animate="show"
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.1,
+                            ease: "easeOut",
+                        }}>
                         <Activity
                             width={12}
                             strokeWidth={3}
@@ -42,28 +58,35 @@ function HomeHero() {
                         <span className="text-sm-regular">
                             Cognitive Performance Platform
                         </span>
-                    </div>
+                    </motion.div>
                     {/* Headline + Subtext */}
-                    <div className="hero__copy">
+                    <motion.div
+                        className="hero__copy"
+                        variants={fadeUp}
+                        initial="hidden"
+                        animate="show"
+                        transition={{ duration: 0.55, delay: 0.22, ease: "easeOut" }}
+                    >
                         <h1 className="hero__title">
                             Know when your team <br />
                             hits limit before they do
                         </h1>
                         <div className="hero__subtitle text-base-regular">
-                            Real-time EEG monitoring that turns cognitive load
-                            into
+                            Real-time EEG monitoring that turns cognitive load into
                             <br />
                             actionable data for defence, aviation and logistics.
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="hero__actions">
+                    <motion.div
+                        className="hero__actions"
+                        variants={fadeUp}
+                        initial="hidden"
+                        animate="show"
+                        transition={{ duration: 0.55, delay: 0.36, ease: "easeOut" }}
+                    >
                         <Link to="/contact">
-                            <Button
-                                size="lg"
-                                iconTrailing={
-                                    <ArrowRight width={16}></ArrowRight>
-                                }>
+                            <Button size="lg" iconTrailing={<ArrowRight width={16} />}>
                                 Book a Free Demo
                             </Button>
                         </Link>
@@ -72,16 +95,22 @@ function HomeHero() {
                                 Watch overview
                             </Button>
                         </Link>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Product Screenshot */}
-                <div className="hero__product">
+                <motion.div
+                    className="hero__product"
+                    variants={fadeUp}
+                    initial="hidden"
+                    animate="show"
+                    transition={{ duration: 0.65, delay: 0.5, ease: "easeOut" }}
+                >
                     <img
                         src="https://res.cloudinary.com/dp90xtgcp/image/upload/v1777311654/ProductUI_bnzhu3.png"
                         alt="hero__dashboard"
                     />
-                </div>
+                </motion.div>
             </div>
         </section>
     );
