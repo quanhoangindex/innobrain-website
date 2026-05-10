@@ -4,11 +4,13 @@ import { ArrowUpRight } from "lucide-react";
 import Button from "./ui/Button";
 import "./Header.css";
 
+const scrollTop = () => window.scrollTo(0, 0);
+
 function Header() {
     return (
         <header className="header">
             <div className="header__inner">
-                <Link to="/" className="header__logo">
+                <Link to="/" className="header__logo" onClick={scrollTop}>
                     <svg
                         width="156"
                         height="30"
@@ -76,11 +78,19 @@ function Header() {
                 </Link>
 
                 <nav className="header__nav">
-                    <NavLink to="/platform">Platform</NavLink>
-                    <NavLink to="#">Industries</NavLink>
-                    <NavLink to="/about">About Us</NavLink>
-                    <NavLink to="/contact">Contact</NavLink>
-                    <NavLink to="#">Sector</NavLink>
+                    <NavLink to="/platform" onClick={scrollTop}>
+                        Platform
+                    </NavLink>
+                    <NavLink to="#  onClick = {scrollTop}">Industries</NavLink>
+                    <NavLink to="/about" onClick={scrollTop}>
+                        About Us
+                    </NavLink>
+                    <NavLink to="/contact" onClick={scrollTop}>
+                        Contact
+                    </NavLink>
+                    <NavLink to="#" onClick={scrollTop}>
+                        Sector
+                    </NavLink>
                 </nav>
 
                 <div className="header__actions">
