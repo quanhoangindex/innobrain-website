@@ -1,7 +1,16 @@
 import "./ContactForm.css";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
-import { Sparkles, DatabaseZap, Focus, Cloud } from "lucide-react";
+import {
+    UserRound,
+    Mail,
+    Building,
+    SquareUser,
+    Sparkles,
+    DatabaseZap,
+    Focus,
+    Cloud,
+} from "lucide-react";
 import { useState } from "react";
 
 const IMG_SKAPA =
@@ -111,27 +120,34 @@ function ContactForm() {
                             onSubmit={(e) => e.preventDefault()}>
                             <div className="cform__row">
                                 <Input
-                                    size=""
-                                    label="Name *"
+                                    size="md"
+                                    label="Name"
+                                    required
                                     placeholder="Name"
+                                    iconLeading={<UserRound size={16} />}
                                 />
                                 <Input
-                                    size=""
-                                    label="Email *"
+                                    size="md"
+                                    label="Email"
+                                    required
                                     placeholder="Email"
+                                    iconLeading={<Mail size={16} />}
                                 />
-                                <Input>hello</Input>
                             </div>
 
                             <Input
-                                size=""
-                                label="Company *"
-                                placeholder="Company"
+                                size="md"
+                                label="Company"
+                                required
+                                placeholder="Name"
+                                iconLeading={<Building size={16} />}
                             />
                             <Input
-                                size=""
-                                label="Job Title *"
+                                size="md"
+                                label="Job Title"
+                                required
                                 placeholder="Job Title"
+                                iconLeading={<SquareUser size={16} />}
                             />
 
                             {/* Industries dropdown */}
@@ -179,8 +195,8 @@ function ContactForm() {
 
                             {/* Message textarea */}
                             <Input
-                                size=""
-                                area="--area"
+                                size="md"
+                                type="Text Area"
                                 label="Message to us"
                                 placeholder="Comment or message"
                             />
