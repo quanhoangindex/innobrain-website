@@ -1,0 +1,71 @@
+.inputxl {
+  display: flex;
+  width: 295px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-15);
+}
+
+.input__labelxl {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: var(--space-1);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-style: normal;
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-base);
+}
+
+.input__fieldxl {
+  display: flex;
+  height: 44px;
+  padding: 0 var(--space-3);
+  align-items: center;
+  gap: var(--space-2);
+  align-self: stretch;
+}
+
+.inputmd {
+  display: flex;
+  width: 295px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-15);
+}
+
+.input__labelmd {
+  display: flex;
+  height: 24px;
+  align-items: center;
+  gap: var(--space-1);
+  align-self: stretch;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-style: normal;
+  font-weight: var(--fw-medium);
+  line-height: var(--sm-base);
+}
+
+.input__fieldmd {
+  display: flex;
+  height: 40px;
+  padding: 0 var(--space-3);
+  align-items: center;
+  gap: var(--space-2);
+  align-self: stretch;
+}
+
+.input__fieldmdarea {
+  display: flex;
+  height: 120px;
+  padding: var(--space-25) var(--space-3);
+  align-items: flex-start;
+  gap: var(--space-2);
+  align-self: stretch;
+  resize: none;
+  box-sizing: border-box;
+}

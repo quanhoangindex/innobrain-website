@@ -1,0 +1,37 @@
+.videopl-outisde {
+  width: 1000px;
+  height: 724px;
+  aspect-ratio: 221/160;
+  background: url(<path-to-image>) lightgray 0px 0px / 100% 100% no-repeat;
+}
+
+.videop-inside {
+  width: 914.943px;
+  height: 638.959px;
+  border-radius: var(--radius-2xl, 16px);
+  background:
+    url(<path-to-image>) lightgray 50% / cover no-repeat,
+    url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.videop-button {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  min-width: 44px;
+  padding: 10px var(--6, 24px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--2, 8px);
+  border-radius: var(--radius-full, 9999px);
+  border: 6px solid var(--border-strong, #cbd5e1);
+  background: var(--neutral-900, #0f2035);
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.08);
+}
+
+.videop-play {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+}
