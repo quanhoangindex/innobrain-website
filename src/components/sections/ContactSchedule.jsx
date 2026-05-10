@@ -1,7 +1,7 @@
 import "./ContactSchedule.css";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowDownRight } from "lucide-react";
 
 function ContactSchedule() {
     {
@@ -28,7 +28,7 @@ function ContactSchedule() {
                         <br />
                         BOOK A CALL WITH US
                     </p>
-                    <ArrowUpRight size={20} color="var(--text-secondary)" />
+                    <ArrowDownRight size={20} color="var(--text-secondary)" />
                 </div>
                 <div className="csched__cal">
                     {/*cal.com embed */}
