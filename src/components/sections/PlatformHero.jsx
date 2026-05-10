@@ -3,6 +3,13 @@ import Button from "../ui/Button";
 import { ArrowRight, ArrowDownRight, Airplay, Play } from "lucide-react";
 import "./PlatformHero.css";
 import DotGrid from "../effects/DotGrid";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 24 },
+    show: { opacity: 1, y: 0 },
+    // animation reference from framer-motion
+};
 
 const IMG_TRUSTED =
     "https://res.cloudinary.com/dp90xtgcp/image/upload/v1777846473/TrustedAI_cwi9ri.png";
@@ -36,17 +43,35 @@ function PlatformHero() {
                     </div>
 
                     <div className="platform-hero__content">
-                        <div className="platform-hero__tag">
+                        <motion.div
+                            className="platform-hero__tag"
+                            variants={fadeUp}
+                            initial="hidden"
+                            animate="show"
+                            transition={{
+                                duration: 0.5,
+                                delay: 0.1,
+                                ease: "easeOut",
+                            }}>
                             <Airplay
                                 size={12}
                                 strokeWidth={3}
                                 color="var(--brand-primary)"
                             />
                             <span>InnoBrain Platform</span>
-                        </div>
+                        </motion.div>
 
                         {/* Heading + subtext */}
-                        <div className="platform-hero__text">
+                        <motion.div
+                            className="platform-hero__text"
+                            variants={fadeUp}
+                            initial="hidden"
+                            animate="show"
+                            transition={{
+                                duration: 0.55,
+                                delay: 0.22,
+                                ease: "easeOut",
+                            }}>
                             <h1 className="platform-hero__title">
                                 Turn brain data
                                 <br />
@@ -61,16 +86,35 @@ function PlatformHero() {
                                 leads, and safety officers a live window into
                                 operator readiness.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <Link to="/contact">
-                            <Button iconTrailing={<ArrowRight size={16} />}>
-                                Book a Free Demo
-                            </Button>
-                        </Link>
+                        <motion.div
+                            variants={fadeUp}
+                            initial="hidden"
+                            animate="show"
+                            transition={{
+                                duration: 0.65,
+                                delay: 0.4,
+                                ease: "easeOut",
+                            }}>
+                            <Link to="/contact">
+                                <Button iconTrailing={<ArrowRight size={16} />}>
+                                    Book a Free Demo
+                                </Button>
+                            </Link>
+                        </motion.div>
 
                         {/* Awards & Recognition */}
-                        <div className="platform-hero__awards-wrap">
+                        <motion.div
+                            className="platform-hero__awards-wrap"
+                            variants={fadeUp}
+                            initial="hidden"
+                            animate="show"
+                            transition={{
+                                duration: 0.66,
+                                delay: 0.45,
+                                ease: "easeOut",
+                            }}>
                             <div className="platform-hero__awards">
                                 {/* Corner decorators */}
                                 <span
@@ -113,12 +157,17 @@ function PlatformHero() {
                                     />
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="platform-hero__scroll-hint">
+                        <motion.div
+                            className="platform-hero__scroll-hint"
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
+                            viewport={{ once: true }}>
                             <span>SEE HOW IT WORKS</span>
                             <ArrowDownRight size={20} />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -127,7 +176,16 @@ function PlatformHero() {
                 <div className="platform-video__inner">
                     <div className="platform-video__bg" aria-hidden="true" />
 
-                    <div className="platform-video__float">
+                    <motion.div
+                        className="platform-video__float"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.55,
+                            delay: 0.4,
+                            ease: "easeOut", 
+                        }}
+                        viewport={{ once: true }}>
                         <div className="platform-video__device">
                             <a href={VIDEO_SRC}>
                                 <img
@@ -138,7 +196,7 @@ function PlatformHero() {
                                 />
                             </a>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
         </>
