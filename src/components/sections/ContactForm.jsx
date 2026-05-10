@@ -12,6 +12,7 @@ import {
     Cloud,
 } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const IMG_SKAPA =
     "https://res.cloudinary.com/dp90xtgcp/image/upload/v1778423477/Skapa_Prize_y5hc1t.png";
@@ -63,7 +64,16 @@ function ContactForm() {
                     {/* Left */}
                     <div className="cform__left">
                         <div className="cform__info">
-                            <div className="cform__text">
+                            <motion.div
+                                className="cform__text"
+                                initial={{ opacity: 0, y: 24 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: 0.22,
+                                    ease: "easeOut",
+                                }}
+                                viewport={{ once: true }}>
                                 <h2 className="cform__title">
                                     Contact us here
                                 </h2>
@@ -73,9 +83,18 @@ function ContactForm() {
                                     looking to apply our technology in your
                                     organization, we'd be glad to hear from you.
                                 </p>
-                            </div>
+                            </motion.div>
 
-                            <ul className="cform__features">
+                            <motion.ul
+                                className="cform__features"
+                                initial={{ opacity: 0, y: 24 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    duration: 0.55,
+                                    delay: 0.4,
+                                    ease: "easeOut",
+                                }}
+                                viewport={{ once: true }}>
                                 <li className="cform__feature-label text-base-medium">
                                     Features
                                 </li>
@@ -91,9 +110,18 @@ function ContactForm() {
                                         </span>
                                     </li>
                                 ))}
-                            </ul>
+                            </motion.ul>
 
-                            <div className="cform__awards">
+                            <motion.div
+                                className="cform__awards"
+                                initial={{ opacity: 0, y: 24 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    duration: 0.65,
+                                    delay: 0.55,
+                                    ease: "easeOut",
+                                }}
+                                viewport={{ once: true }}>
                                 <img
                                     src={IMG_SKAPA}
                                     alt="SKAPA Prize"
@@ -109,12 +137,21 @@ function ContactForm() {
                                     alt="IVA Top 100"
                                     className="cform__award-img"
                                 />
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
 
                     {/*Right */}
-                    <div className="cform__card">
+                    <motion.div
+                        className="cform__card"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.4,
+                            ease: "easeOut",
+                        }}
+                        viewport={{ once: true }}>
                         <form
                             className="cform__form"
                             onSubmit={(e) => e.preventDefault()}>
@@ -206,7 +243,7 @@ function ContactForm() {
                                 <Button size="lg">Submit</Button>
                             </div>
                         </form>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
