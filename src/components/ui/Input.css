@@ -1,0 +1,110 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.input__label-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 24px;
+    white-space: nowrap;
+}
+
+.input__label {
+    font-family: var(--font-sans);
+    font-weight: var(--fw-medium);
+    color: var(--text-primary);
+}
+
+.input--md .input__label {
+    font-size: var(--text-sm);
+    line-height: var(--lh-sm);
+}
+
+.input--xl .input__label {
+    font-size: var(--text-base);
+    line-height: var(--lh-base);
+}
+
+.input__required {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--lh-base);
+    font-weight: var(--fw-normal, 400);
+    color: var(--brand-primary);
+}
+
+.input__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    background: var(--bg-page);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg, 8px);
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease;
+}
+
+.input--md .input__wrapper {
+    height: 40px;
+}
+
+.input--xl .input__wrapper {
+    height: 44px;
+}
+
+.input__wrapper--area {
+    height: 120px !important;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.input__wrapper:focus-within {
+    border-color: var(--brand-primary);
+}
+
+.input__field {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: var(--font-sans);
+    font-weight: var(--fw-normal, 400);
+    color: var(--text-primary);
+}
+
+.input--md .input__field {
+    font-size: var(--text-sm);
+    line-height: var(--lh-sm);
+}
+
+.input--xl .input__field {
+    font-size: var(--text-base);
+    line-height: var(--lh-base);
+}
+
+.input__field::placeholder {
+    color: var(--text-disabled, #cbd5e1);
+}
+
+/* Textarea */
+.input__field--area {
+    resize: none;
+    height: 100%;
+    padding: 0;
+}
+
+/* Leading / trailing icons*/
+.input__icon {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--text-disabled);
+}

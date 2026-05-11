@@ -1,0 +1,47 @@
+.header {
+    position: sticky;
+    top: 0;
+    background: var(--neutral-0);
+    border-bottom: 1px solid var(--border-default);
+    height: 80px;
+    padding: 0 var(--space-20);
+    z-index: 2;
+}
+
+.header__inner {
+    max-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    flex-shrink: 0;
+}
+
+.header__nav {
+    margin-left: var(--space-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-left: auto;
+}
+
+/* Star rotates and scales up on hover */
+.logo__star {
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: transform 600ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.header__logo:hover .logo__star {
+    transform: rotate(180deg) scale(1.2);
+}

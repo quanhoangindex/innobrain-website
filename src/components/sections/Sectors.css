@@ -1,0 +1,223 @@
+.sectors {
+    padding: 0 var(--space-20);
+}
+
+.sectors__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    border-left: 1px solid var(--border-default);
+    border-right: 1px solid var(--border-default);
+    background: var(--bg-page);
+    padding-top: var(--space-20);
+}
+
+.sectors__label-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px var(--space-20);
+    border-bottom: 1px dashed var(--border-default);
+}
+
+.sectors__label {
+    font-family: var(--font-roboto);
+    font-size: var(--text-sm);
+    font-weight: var(--fw-semibold);
+    color: var(--text-tertiary);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.sectors__heading {
+    padding: var(--space-20) var(--space-20) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 800px;
+}
+
+.sectors__title {
+    font-family: var(--font-sans);
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: var(--fw-bold);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.sectors__subtitle {
+    font-family: var(--font-sans);
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: var(--fw-bold);
+    color: var(--text-tertiary);
+    margin: 0;
+}
+
+
+.sectors__grid-wrapper {
+    display: flex;
+    align-items: stretch;
+    margin-top: var(--space-20);
+}
+
+/* 80px wide on each side */
+.sectors__stripe {
+    width: 80px;
+    flex-shrink: 0;
+    position: relative;
+    border-top: 1px dashed var(--border-default);
+    border-bottom: 1px dashed var(--border-default);
+}
+
+.sectors__stripe::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+        315deg,
+        var(--border-default) 0px,
+        var(--border-default) 1px,
+        transparent 1px,
+        transparent 15px
+    );
+    opacity: 0.5;
+}
+
+.sectors__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex: 1;
+}
+
+.sectors__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    border-left: 1px solid var(--border-default);
+    border-top: 1px solid var(--border-default);
+    min-height: 320px;
+    overflow: hidden;
+    background: var(--bg-page);
+}
+
+/* Soft glow */
+.sectors__card::after {
+    content: '';
+    position: absolute;
+    top: -56px;
+    right: -56px;
+    width: 174px;
+    height: 174px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 300ms ease;
+}
+
+/* Hide glow on hover — image takes over */
+.sectors__card:hover::after {
+    opacity: 0;
+}
+
+/* Bottom row cards get a bottom border */
+.sectors__card:nth-child(n + 4) {
+    border-bottom: 1px solid var(--border-default);
+}
+
+/* Last row cards get a right border */
+.sectors__card:nth-child(3n) {
+    border-right: 1px solid var(--border-default);
+}
+
+.sectors__card-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.sectors__card-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Blue overlay on top of image */
+.sectors__card-overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--bg-brand-alpha-50);
+}
+
+/* Show bg on hover */
+.sectors__card:hover .sectors__card-bg {
+    opacity: 1;
+}
+
+/* Bring content above bg */
+.sectors__card-icon,
+.sectors__card-text {
+    position: relative;
+    z-index: 1;
+}
+
+.sectors__card-title,
+.sectors__card-desc,
+.sectors__card-icon {
+    transition:
+        color 300ms ease,
+        background 300ms ease;
+}
+
+.sectors__card:hover .sectors__card-title,
+.sectors__card:hover .sectors__card-desc {
+    color: var(--text-inverse);
+}
+
+.sectors__card:hover .sectors__card-desc {
+    color: var(--text-inverse);
+}
+
+.sectors__card:hover .sectors__card-icon {
+    color: var(--brand-primary);
+}
+
+.sectors__card-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--brand-primary-subtle);
+    border-radius: var(--radius-md);
+    color: var(--brand-primary);
+    flex-shrink: 0;
+}
+
+.sectors__card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sectors__card-title {
+    font-family: var(--font-sans);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: var(--fw-bold);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.sectors__card-desc {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    line-height: var(--lh-sm);
+    color: var(--text-secondary);
+    margin: 0;
+}

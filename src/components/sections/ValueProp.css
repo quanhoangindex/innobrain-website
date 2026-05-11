@@ -1,0 +1,92 @@
+.value-prop {
+    padding: 0 var(--space-20);
+}
+
+.value-prop__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-default);
+}
+
+.value-prop__copy {
+    display: flex;
+    padding: var(--space-20);
+    flex-direction: column;
+    gap: var(--space-10);
+}
+
+.value-prop__highlight {
+    color: var(--brand-primary);
+    margin-right: var(--space-2);
+}
+
+.value-prop__title sup {
+    vertical-align: middle;
+    line-height: 0;
+    position: relative;
+    top: -16px;
+}
+
+.help-icon {
+    color: var(--brand-primary);
+}
+
+.value-prop__cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.value-prop__cta-group Button {
+    width: fit-content;
+}
+
+.value-prop__checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.value-prop__check-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2-5);
+    color: var(--text-secondary);
+}
+
+.value-prop__visual {
+    width: 600px;
+    height: 600px;
+}
+
+.eeg-tooltip-wrapper{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.eeg-tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    background: var(--bg-page);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    line-height: var(--lh-sm);
+    font-weight: normal;
+    padding: var(--space-3) var(--space-3);
+    border-radius: var(--radius-lg);
+    width: 260px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease;
+    box-shadow: 0 8px 16px -2px rgba(27, 33, 44, 0.12);
+}
+
+.eeg-tooltip-wrapper:hover .eeg-tooltip {
+    opacity: 1;
+}

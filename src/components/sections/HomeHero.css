@@ -1,0 +1,83 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 0 var(--space-20);
+}
+
+.hero__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: var(--space-20) var(--space-5);
+    border-left: 1px solid var(--border-default);
+    border-right: 1px solid var(--border-default);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-10);
+    position: relative;
+    z-index: 0;
+}
+
+.hero__bg {
+    background-image: url("https://res.cloudinary.com/dp90xtgcp/image/upload/v1777320409/HeroBg_onmxg8.png");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 1;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+    z-index: 1;
+}
+
+.hero__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-default);
+    color: var(--text-secondary);
+}
+
+.hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    text-align: center;
+}
+
+.hero__title {
+    margin: 0;
+    font-size: var(--text-5xl);
+    line-height: var(--lh-5xl);
+    font-weight: var(--fw-bold);
+    font-family: var(--font-sans);
+    color: var(--text-primary);
+}
+
+.hero__subtitle {
+    color: var(--text-secondary);
+    font-family: var(--font-roboto);
+}
+
+.hero__actions {
+    display: inline-flex;
+    gap: var(--space-3);
+}
+
+.hero__product {
+    width: 1000px;
+    height: fit-content;
+}
+
+.hero__product img {
+    width: 100%;
+}
