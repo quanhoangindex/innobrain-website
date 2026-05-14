@@ -146,7 +146,7 @@
     flex-direction: column;
     gap: var(--space-3);
     border-top: 1px solid var(--border-default);
-    background: var(--bg-subtle)
+    background: var(--bg-subtle);
 }
 
 .mobile-menu__actions .btn,
@@ -178,6 +178,7 @@
     }
 
     .mobile-menu__actions {
-        padding: var(--space-6) var(--space-5);
+        padding: var(--space-6) var(--space-6) var(--space-10) var(--space-5) ;
+        
     }
 }
