@@ -97,7 +97,11 @@
     }
 
     .cta__inner {
-        padding: var(--space-20) var(--space-12);
+        padding: var(--space-20) var(--space-5);
+    }
+
+    .cta__subtitle br {
+        display: none;
     }
 
     .cta__title {
