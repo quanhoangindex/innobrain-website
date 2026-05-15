@@ -184,6 +184,13 @@
 
 @media (max-width: 768px) {
     .header {
+        height: 64px;
         padding: 0 var(--space-5);
+    }
+    .header__logo svg {
+        width: 140px;
+    }
+    .mobile-menu__top {
+        height: 64px;
     }
 }
