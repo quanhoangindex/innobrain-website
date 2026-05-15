@@ -309,6 +309,10 @@
         line-height: var(--lh-2xl);
     }
 
+    .sectors__stripe {
+        width: 20px;
+    }
+
     .sectors__grid-wrapper {
         margin-top: var(--space-12);
     }
