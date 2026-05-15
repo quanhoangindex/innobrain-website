@@ -161,7 +161,7 @@
 
 @media (max-width: 1024px) {
     .header {
-        padding: 0 var(--space-5);
+        padding: 0 var(--space-10);
     }
 
     .header__nav,
@@ -178,7 +178,12 @@
     }
 
     .mobile-menu__actions {
-        padding: var(--space-6) var(--space-6) var(--space-10) var(--space-5) ;
-        
+        padding: var(--space-6) var(--space-6) var(--space-10) var(--space-5);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 var(--space-5);
     }
 }
