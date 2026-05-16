@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import NavLink from "./ui/NavLink";
+import NavLink from "./NavLink";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import Button from "./ui/Button";
+import Button from "./Button";
 import "./Header.css";
 
 const scrollTop = () => window.scrollTo(0, 0);
