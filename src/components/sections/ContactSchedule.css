@@ -40,3 +40,38 @@
     min-height: 500px;
     overflow: hidden;
 }
+
+@media (max-width: 1024px) {
+    .csched {
+        padding: 0 var(--space-10);
+    }
+    .csched__inner {
+        padding-left: var(--space-10);
+        padding-right: var(--space-10);
+    }
+
+    .csched__label {
+        font-size: var(--text-sm);
+    }
+}
+
+@media (max-width: 768px) {
+    .csched {
+        padding: 0 var(--space-5);
+    }
+
+    .csched__cal {
+        min-width: none;
+
+        border: 1px solid var(--border-default);
+        border-radius: var(--radius-lg);
+    }
+
+    .csched__label {
+        font-size: var(--text-sm);
+    }
+
+    .csched__cal {
+        min-height: 600px;
+    }
+}

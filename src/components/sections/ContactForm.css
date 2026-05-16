@@ -228,3 +228,83 @@
     width: 100%;
     justify-content: center;
 }
+
+@media (max-width: 1024px) {
+    .cform {
+        padding: 0 var(--space-10);
+    }
+
+    .cform__body {
+        padding: var(--space-12) var(--space-8);
+        gap: var(--space-8);
+    }
+    .cform__row {
+        flex-direction: column;
+        gap: var(--space-6);
+    }
+    .cform__info {
+        position: static;
+        gap: var(--space-8);
+    }
+
+    .cform__title {
+        font-size: var(--text-3xl);
+        line-height: var(--lh-3xl);
+    }
+    .cform__roles {
+        flex-direction: column;
+    }
+    .cform__role-btn {
+        padding: var(--space-3);
+    }
+    .cform__card {
+        padding: var(--space-8);
+    }
+}
+
+@media (max-width: 768px) {
+    .cform {
+        padding: 0 var(--space-5);
+    }
+
+    .cform__inner {
+        padding: var(--space-5) var(--space-5);
+    }
+
+    .cform__body {
+        flex-direction: column;
+        padding: var(--space-10) var(--space-5);
+        gap: var(--space-12);
+        overflow: hidden;
+    }
+
+    .cform__info {
+        position: static;
+        padding: 0;
+        gap: var(--space-6);
+    }
+
+    .cform__title {
+        font-size: var(--text-2xl);
+        line-height: var(--lh-2xl);
+    }
+
+    .cform__card {
+        width: 100%;
+        padding: var(--space-6);
+        border-radius: var(--radius-lg);
+    }
+
+    .cform__row {
+        flex-direction: column;
+        gap: var(--space-6);
+    }
+
+    .cform__role-btn {
+        font-size: var(--text-xs);
+    }
+
+    .cform__award-img {
+        height: 36px;
+    }
+}
