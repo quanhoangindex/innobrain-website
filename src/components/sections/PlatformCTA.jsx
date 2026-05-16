@@ -40,7 +40,7 @@ function PlatformCTA() {
                                         delay: 0.55,
                                         ease: "easeOut",
                                     }}
-                                    viewport={{ once: true }}>
+                                    viewport={{ once: true }} className="pcta__cta">
                                     <Link to="/contact">
                                         <Button
                                             iconTrailing={
