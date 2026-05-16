@@ -5,6 +5,7 @@
 
 .inside__inner {
     max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
     border-left: 1px solid var(--border-default);
     border-right: 1px solid var(--border-default);
@@ -73,12 +74,10 @@
     opacity: 0.5;
 }
 
-
 .inside__body {
     display: flex;
     align-items: stretch;
 }
-
 
 .inside__features {
     flex: 1;
@@ -116,7 +115,6 @@
     color: var(--text-secondary);
     width: fit-content;
 }
-
 
 .inside__item-text {
     display: flex;
@@ -167,4 +165,99 @@
     object-fit: cover;
     object-position: top left;
     z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .inside {
+        padding: 0 var(--space-10);
+    }
+
+    .inside__heading-wrap {
+        padding: 0 var(--space-10);
+    }
+
+    .inside__title {
+        font-size: var(--text-3xl);
+        line-height: var(--lh-3xl);
+        white-space: normal;
+    }
+
+    .inside__subtitle {
+        font-size: var(--text-3xl);
+        line-height: var(--lh-3xl);
+    }
+
+    .inside__grid {
+        grid-template-columns: 40px 1fr 40px;
+    }
+    .inside__item {
+        gap: var(--space-6);
+    }
+    .inside__item-title {
+        font-size: var(--text-xl);
+        line-height: var(--lh-xl);
+    }
+
+    .inside__visual {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .inside {
+        padding: 0 var(--space-5);
+    }
+
+    .inside__inner {
+        padding-bottom: var(--space-10);
+    }
+
+    .inside__heading-wrap {
+        padding: 0;
+    }
+
+    .inside__heading {
+        padding: var(--space-10) var(--space-5);
+    }
+
+    .inside__title {
+        font-size: var(--text-2xl);
+        line-height: var(--lh-2xl);
+        white-space: normal;
+    }
+
+    .inside__subtitle {
+        font-size: var(--text-2xl);
+        line-height: var(--lh-2xl);
+    }
+
+    .inside__grid {
+        grid-template-columns: 20px 1fr 20px;
+    }
+
+    .inside__body {
+        flex-direction: column;
+    }
+
+    .inside__features {
+        border-right: 1px solid var(--border-default);
+    }
+
+    .inside__item {
+        padding: var(--space-5);
+        gap: var(--space-8);
+    }
+    .inside__tag {
+        font-size: var(--text-xs);
+    }
+
+    .inside__item-title {
+        font-size: var(--text-base);
+        line-height: var(--lh-base);
+    }
+
+    .inside__visual {
+        min-height: 280px;
+        border-top: none;
+    }
 }
