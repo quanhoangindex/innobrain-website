@@ -44,13 +44,11 @@ function PlatformAwards() {
     return (
         <section className="pawards">
             <div className="pawards__inner">
-                <div className="pawards__row">
+                <div className="pawards__grid">
                     {awards.map((a) => (
-                        <div key={a.id} className="pawards__cell">
-                            <motion.img
-                                src={a.logo}
-                                alt={a.alt}
-                                className="pawards__logo"
+                        <div key={a.id} className="pawards__card">
+                            <motion.div
+                                className="pawards__logo-wrap"
                                 initial={{ opacity: 0, y: 24 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{
@@ -58,17 +56,13 @@ function PlatformAwards() {
                                     delay: 0.22,
                                     ease: "easeOut",
                                 }}
-                                viewport={{ once: true }}
-                            />
-                        </div>
-                    ))}
-                </div>
-
-                <div className="pawards__row">
-                    {awards.map((a) => (
-                        <div
-                            key={a.id}
-                            className="pawards__cell pawards__cell--desc">
+                                viewport={{ once: true }}>
+                                <img
+                                    src={a.logo}
+                                    alt={a.alt}
+                                    className="pawards__logo"
+                                />
+                            </motion.div>
                             <motion.p
                                 className="pawards__desc"
                                 initial={{ opacity: 0, y: 24 }}
