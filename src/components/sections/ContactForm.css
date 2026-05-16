@@ -256,6 +256,7 @@
     }
     .cform__role-btn {
         padding: var(--space-3);
+        font-size: var(--text-sm);
     }
     .cform__card {
         padding: var(--space-8);
@@ -268,14 +269,13 @@
     }
 
     .cform__inner {
-        padding: var(--space-5) var(--space-5);
+        padding: var(--space-5) var(--space-10);
     }
 
     .cform__body {
         flex-direction: column;
         padding: var(--space-10) var(--space-5);
         gap: var(--space-12);
-        overflow: hidden;
     }
 
     .cform__info {
@@ -301,7 +301,7 @@
     }
 
     .cform__role-btn {
-        font-size: var(--text-xs);
+        font-size: var(--text-sm);
     }
 
     .cform__award-img {
