@@ -1,5 +1,5 @@
 import { div } from "three/tsl";
-import "./HomeTrustpartner.css";
+import "./HomeTrustPartner.css";
 import { motion } from "framer-motion";
 
 /* Partner logo - Get url from cloudinary */
@@ -46,7 +46,7 @@ const logos = [
     },
 ];
 
-function HomeTrustpartner() {
+function HomeTrustPartner() {
     return (
         <section className="trust">
             <div className="trust__inner">
@@ -89,4 +89,4 @@ function HomeTrustpartner() {
     );
 }
 
-export default HomeTrustpartner;
+export default HomeTrustPartner;

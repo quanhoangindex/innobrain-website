@@ -1,5 +1,7 @@
 import { Sparkles, Focus, Cloud, DatabaseZap } from "lucide-react";
 import "./Features.css";
+import { motion } from "framer-motion";
+import BlurText from "../effects/BlurText";
 
 /* Background chart image */
 const IMG_BG =
@@ -40,6 +42,10 @@ const features = [
     },
 ];
 
+const handleAnimationComplete = () => {
+    console.log("Animation completed!");
+};
+
 function FeatureCard({ feature, corners }) {
     const { icon: Icon, iconBg, iconColor, title, desc } = feature;
     return (
@@ -51,13 +57,32 @@ function FeatureCard({ feature, corners }) {
                     aria-hidden="true"
                 />
             ))}
-            <div className="features__card-icon" style={{ background: iconBg }}>
+            <motion.div
+                className="features__card-icon"
+                style={{ background: iconBg }}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                    duration: 0.5,
+                    delay: 0.22,
+                    ease: "easeOut",
+                }}
+                viewport={{ once: true }}>
                 <Icon size={20} color={iconColor} strokeWidth={2} />
-            </div>
-            <div className="features__card-body">
+            </motion.div>
+            <motion.div
+                className="features__card-body"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                    duration: 0.55,
+                    delay: 0.4,
+                    ease: "easeOut",
+                }}
+                viewport={{ once: true }}>
                 <p className="features__card-title">{title}</p>
                 <p className="features__card-desc">{desc}</p>
-            </div>
+            </motion.div>
         </div>
     );
 }
@@ -67,12 +92,20 @@ function Features() {
         <section className="features">
             <div className="features__inner">
                 {/* Label bar */}
-                <div className="features__label-bar">
+                <motion.div
+                    className="features__label-bar"
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                        duration: 0.5,
+                        ease: "easeOut",
+                    }}
+                    viewport={{ once: true }}>
                     <span className="features__label">
                         WHAT MAKES OUR PLATFORM STAND OUT
                     </span>
                     <span className="features__label">/ IDENTITY</span>
-                </div>
+                </motion.div>
 
                 <div className="features__container">
                     <img
@@ -83,14 +116,31 @@ function Features() {
                     />
 
                     <div className="features__heading">
-                        <h2 className="features__title">
+                        <BlurText
+                            text="Distinctive Features"
+                            delay={400}
+                            animateBy="words"
+                            direction="top"
+                            onAnimationComplete={handleAnimationComplete}
+                            className="features__title"
+                        />
+                        {/* <h2 className="features__title">
                             Distinctive Features
-                        </h2>
-                        <p className="features__subtitle">
+                        </h2> */}
+                        <motion.p
+                            className="features__subtitle"
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.55,
+                                delay: 0.4,
+                                ease: "easeOut",
+                            }}
+                            viewport={{ once: true }}>
                             Built for environments
                             <br />
                             where failure isn't an option
-                        </p>
+                        </motion.p>
                     </div>
 
                     <div className="features__grid-wrap">

@@ -224,3 +224,109 @@
 .platform-video__device-frame:hover {
     opacity: 0.8;
 }
+
+@media (max-width: 1024px) {
+    /* Hero */
+    .platform-hero {
+        padding: 0 var(--space-10);
+    }
+
+    .platform-hero__inner {
+        padding: var(--space-20) var(--space-12) var(--space-48);
+    }
+
+    .platform-hero__title {
+        font-size: var(--text-4xl);
+        line-height: var(--lh-4xl);
+    }
+
+    .platform-hero__award-img {
+        height: 52px;
+    }
+
+    /* Video */
+    .platform-video {
+        padding: 0 var(--space-10);
+    }
+
+    .platform-video__inner {
+        height: 500px;
+    }
+
+    /* Device scales to fill inner width */
+    .platform-video__device {
+        width: 100%;
+    }
+
+    /* Reduce float overlap to match smaller device */
+    .platform-video__float {
+        margin-top: -160px;
+        padding: 0 var(--space-8);
+    }
+}
+
+/* ─── Mobile (≤ 768px) ─────────────────────────────────────── */
+@media (max-width: 768px) {
+    /* Hero */
+    .platform-hero {
+        padding: 0 var(--space-5);
+    }
+
+    .platform-hero__inner {
+        padding: var(--space-12) var(--space-5) var(--space-32);
+    }
+    .platform-hero__tag {
+        font-size: var(--text-xs);
+    }
+
+    .platform-hero__title {
+        font-size: var(--text-3xl);
+        line-height: var(--lh-3xl);
+    }
+
+    .platform-hero__desc {
+        font-size: var(--text-sm);
+        line-height: var(--lh-sm);
+    }
+    .platform-hero__content_CTA {
+        width: 100%;
+    }
+    .platform-hero__content_CTA Button {
+        width: 100%;
+    }
+    .platform-hero__awards {
+        padding: var(--space-4) var(--space-6);
+    }
+
+    .platform-hero__awards-label {
+        font-size: var(--text-xs);
+        margin-bottom: var(--space-2);
+    }
+
+    .platform-hero__award-img {
+        height: 40px;
+    }
+
+    .platform-hero__scroll-hint {
+        margin-top: var(--space-10);
+    }
+
+    /* Video */
+    .platform-video {
+        padding: 0 var(--space-5);
+    }
+
+    .platform-video__inner {
+        height: 240px;
+    }
+
+    .platform-video__device {
+        width: 100%;
+    }
+
+    /* Reduce float overlap further for narrow screens */
+    .platform-video__float {
+        margin-top: -100px;
+        padding: 0 var(--space-5);
+    }
+}

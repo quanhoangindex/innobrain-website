@@ -1,6 +1,7 @@
 import { Radio, TrendingUpDown, BellRing } from "lucide-react";
 import DotGrid from "../effects/DotGrid";
 import "./PlatformInside.css";
+import { motion } from "framer-motion";
 
 const IMG_DASHBOARD =
     "https://res.cloudinary.com/dp90xtgcp/image/upload/v1777902781/Product_Inside_g7lmvd.png";
@@ -37,12 +38,21 @@ function PlatformInside() {
         <section className="inside">
             <div className="inside__inner">
                 <div className="inside__heading-wrap">
-                    <div className="inside__heading">
+                    <motion.div
+                        className="inside__heading"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.22,
+                            ease: "easeOut",
+                        }}
+                        viewport={{ once: true }}>
                         <h2 className="inside__title">
                             A command view of your team's cognitive state
                         </h2>
                         <p className="inside__subtitle">Inside the platform</p>
-                    </div>
+                    </motion.div>
                 </div>
 
                 <div className="inside__grid">
@@ -57,22 +67,40 @@ function PlatformInside() {
                                 const Icon = f.icon;
                                 return (
                                     <div key={f.id} className="inside__item">
-                                        <div className="inside__tag">
+                                        <motion.div
+                                            className="inside__tag"
+                                            initial={{ opacity: 0, y: 24 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            transition={{
+                                                duration: 0.55,
+                                                delay: 0.4,
+                                                ease: "easeOut",
+                                            }}
+                                            viewport={{ once: true }}>
                                             <Icon
                                                 size={16}
                                                 color={f.color}
                                                 strokeWidth={1.75}
                                             />
                                             <span>{f.tag}</span>
-                                        </div>
-                                        <div className="inside__item-text">
+                                        </motion.div>
+                                        <motion.div
+                                            className="inside__item-text"
+                                            initial={{ opacity: 0, y: 24 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            transition={{
+                                                duration: 0.6,
+                                                delay: 0.5,
+                                                ease: "easeOut",
+                                            }}
+                                            viewport={{ once: true }}>
                                             <p className="inside__item-title">
                                                 {f.title}
                                             </p>
                                             <p className="inside__item-desc">
                                                 {f.desc}
                                             </p>
-                                        </div>
+                                        </motion.div>
                                     </div>
                                 );
                             })}
@@ -94,10 +122,18 @@ function PlatformInside() {
                                     returnDuration={1.5}
                                 />
                             </div>
-                            <img
+                            <motion.img
                                 src={IMG_DASHBOARD}
                                 alt="InnoBrain platform dashboard"
                                 className="inside__visual-img"
+                                initial={{ opacity: 0, y: 24 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: 0.22,
+                                    ease: "easeOut",
+                                }}
+                                viewport={{ once: true }}
                             />
                         </div>
                     </div>

@@ -72,3 +72,55 @@
 .trust__cell:hover .trust__logo {
     transform: scale(1.2);
 }
+
+@media (max-width: 1024px) {
+    .trust {
+        padding: 0 var(--space-10);
+    }
+    .trust__label-row {
+        height: 68px;
+    }
+    .trust__label {
+        font-size: var(--text-base);
+        font-weight: var(--fw-bold);
+    }
+
+    .trust__cell {
+        height: 100px;
+    }
+    .trust__logo {
+        max-width: 80px;
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .trust {
+        padding: 0 var(--space-5);
+    }
+
+    .trust__inner {
+        padding-bottom: var(--space-12);
+    }
+
+    .trust__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trust__cell:nth-child(5n) {
+        border-right: 1px solid var(--border-default);
+    }
+
+    .trust__cell:nth-child(2n) {
+        border-right: none;
+    }
+
+    .trust__cell {
+        height: 90px;
+    }
+
+    .trust__logo {
+        max-width: 80px;
+        max-height: 40px;
+    }
+}
