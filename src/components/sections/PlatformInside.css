@@ -213,12 +213,13 @@
     }
 
     .inside__heading-wrap {
-        padding: 0;
+        padding: 0 var(--space-5);
     }
 
     .inside__heading {
-        padding: var(--space-10) var(--space-5);
+       padding: var(--space-10) var(--space-10);
     }
+    
 
     .inside__title {
         font-size: var(--text-2xl);
