@@ -7,9 +7,7 @@ import Platform from "./pages/Platform";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-
-
+import Footer from "./components/ui/Footer";
 
 function App() {
     const [count, setCount] = useState(0);
