@@ -96,7 +96,7 @@ function PlatformHero() {
                                 duration: 0.65,
                                 delay: 0.4,
                                 ease: "easeOut",
-                            }}>
+                            }} className="platform-hero__content_CTA">
                             <Link to="/contact">
                                 <Button iconTrailing={<ArrowRight size={16} />}>
                                     Book a Free Demo
