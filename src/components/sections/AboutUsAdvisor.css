@@ -1,4 +1,4 @@
-.advisors_container {
+.advisor_container {
   display: flex;
   width: 1440px;
   padding: 0 var(--space-20, 80px);
@@ -76,91 +76,6 @@
   border: 1px solid var(--border-default, #e2e8f0);
 }
 
-.advisor_card {
-  display: flex;
-  width: 550px;
-  height: 350px;
-  flex-direction: column;
-  align-items: flex-start;
-  border-right: 1px solid var(--border-default, #e2e8f0);
-  border-left: 1px solid var(--border-default, #e2e8f0);
-}
-
-.advisor_card_background {
-  display: flex;
-  padding: 0 34px 0 74px;
-  justify-content: flex-end;
-  align-items: center;
-  flex: 1 0 0;
-  align-self: stretch;
-  background: var(--blue-100, #dbeafe);
-}
-
-.advisor_text_container {
-  display: flex;
-  width: 550px;
-  padding: var(--space-8, 32px);
-  align-items: flex-start;
-  gap: 8px;
-  background: var(--brand-primary, #2563eb);
-}
-
-.advisor_linkedin_wrapper {
-  display: flex;
-  width: 36px;
-  height: 36px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-}
-
-.advisor_linkedin {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  aspect-ratio: 1/1;
-}
-
-.advisor_text_stack {
-  display: flex;
-  padding-right: var(--space-10, 40px);
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-15, 6px);
-  flex: 1 0 0;
-}
-
-.advisor_card_title {
-  align-self: stretch;
-  color: var(--text-inverse, #fff);
-  font-family: var(--font-family-font-family, Roboto);
-  font-size: var(--font-size-text-sm, 14px);
-  font-style: normal;
-  font-weight: var(--font-weight-normal, 400);
-  line-height: var(--line-height-text-sm, 20px);
-}
-
-.advisor_card_name {
-  color: var(--text-inverse, #fff);
-  font-family: var(--font-family-font-family, "Rethink Sans");
-  font-size: var(--font-size-text-3xl, 30px);
-  font-style: normal;
-  font-weight: var(--font-weight-bold, 700);
-  line-height: var(--line-height-text-3xl, 36px);
-}
-
-.advisor_card_description {
-  align-self: stretch;
-  color: var(--text-inverse, #fff);
-  font-family: var(--font-family-font-family, Roboto);
-  font-size: var(--font-size-text-base, 16px);
-  font-style: normal;
-  font-weight: var(--font-weight-normal, 400);
-  line-height: var(--line-height-text-base, 24px);
-}
-
 .advisor_break {
   display: flex;
   flex-direction: column;
@@ -168,4 +83,22 @@
   align-items: center;
   gap: 10px;
   align-self: stretch;
+}
+
+.advisor_tiles_row {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  align-items: flex-start;
+}
+
+.advisor_tiles_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.advisor_cards_column {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
 }
