@@ -1,6 +1,7 @@
 import AboutUsHero from "../components/sections/AboutUsHero";
 import AboutUsTeam from "../components/sections/AboutUsTeam";
 import PlatformAwards from "../components/sections/PlatformAwards";
+import AboutUsAdvisors from "../components/sections/AboutUsAdvisors"
 
 function About() {
     return (
@@ -8,6 +9,7 @@ function About() {
             <AboutUsHero />
             <AboutUsTeam />
             <PlatformAwards />
+            <AboutUsAdvisors/>
         </main>
     );
 }

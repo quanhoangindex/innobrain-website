@@ -65,14 +65,18 @@ function HomeHero() {
                         variants={fadeUp}
                         initial="hidden"
                         animate="show"
-                        transition={{ duration: 0.55, delay: 0.22, ease: "easeOut" }}
-                    >
+                        transition={{
+                            duration: 0.55,
+                            delay: 0.22,
+                            ease: "easeOut",
+                        }}>
                         <h1 className="hero__title">
                             Know when your team <br />
                             hits limit before they do
                         </h1>
                         <div className="hero__subtitle text-base-regular">
-                            Real-time EEG monitoring that turns cognitive load into
+                            Real-time EEG monitoring that turns cognitive load
+                            into
                             <br />
                             actionable data for defence, aviation and logistics.
                         </div>
@@ -83,10 +87,15 @@ function HomeHero() {
                         variants={fadeUp}
                         initial="hidden"
                         animate="show"
-                        transition={{ duration: 0.55, delay: 0.36, ease: "easeOut" }}
-                    >
+                        transition={{
+                            duration: 0.55,
+                            delay: 0.36,
+                            ease: "easeOut",
+                        }}>
                         <Link to="/contact">
-                            <Button size="lg" iconTrailing={<ArrowRight width={16} />}>
+                            <Button
+                                size="lg"
+                                iconTrailing={<ArrowRight width={16} />}>
                                 Book a Free Demo
                             </Button>
                         </Link>
@@ -104,8 +113,11 @@ function HomeHero() {
                     variants={fadeUp}
                     initial="hidden"
                     animate="show"
-                    transition={{ duration: 0.65, delay: 0.5, ease: "easeOut" }}
-                >
+                    transition={{
+                        duration: 0.65,
+                        delay: 0.5,
+                        ease: "easeOut",
+                    }}>
                     <img
                         src="https://res.cloudinary.com/dp90xtgcp/image/upload/v1777311654/ProductUI_bnzhu3.png"
                         alt="hero__dashboard"
