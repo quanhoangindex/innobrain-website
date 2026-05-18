@@ -280,8 +280,6 @@
 .auadv__card:hover .auadv__name,
 .auadv__card--active .auadv__name {
     color: var(--text-inverse);
-    font-size: var(--text-3xl);
-    line-height: var(--lh-3xl);
 }
 
 .auadv__card:hover .auadv__bio,

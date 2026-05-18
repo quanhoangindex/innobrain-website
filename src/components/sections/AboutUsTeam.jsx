@@ -75,7 +75,7 @@ const members = [
         name: "Mahdi Davari",
         bio: "Ph.D. in Auto. sytems, Exc. MBA, 12+ yrs. of exp. (Audi, Scania, etc.), 2x entrepreneur, patent holder.",
         photo: "https://res.cloudinary.com/dp90xtgcp/image/upload/v1778949644/Mahdi_yksgs2.png",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/mmdavari/",
     },
     {
         id: 2,
@@ -83,7 +83,7 @@ const members = [
         name: "Ali Osia",
         bio: "Ph.D. in AI, 9+ yrs. of exp., 2x entrepreneur, National Bronz Medalist in Math Olympiad.",
         photo: "https://res.cloudinary.com/dp90xtgcp/image/upload/v1778949644/Ali_hc3pxo.png",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/ali-osia/",
     },
     {
         id: 3,
@@ -91,7 +91,7 @@ const members = [
         name: "Masih Davari",
         bio: "Dual Master in Digital Design and Prototyping, 9+ yrs. of exp. in product dev., patent holder.",
         photo: "https://res.cloudinary.com/dp90xtgcp/image/upload/v1778949644/Masih_dbe3gt.png",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/masih-davari-b1693a78/",
     },
 ];
 

@@ -39,7 +39,7 @@ const advisors = [
         name: "David Fox",
         bio: "Serial entrepreneur and investor with 20+ yrs. of exp. scaling deep-tech ventures across Europe and North America.",
         photo: "https://res.cloudinary.com/dp90xtgcp/image/upload/v1779031294/Sam_m8arir.png",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/davidfox/",
         active: false,
     },
     {
@@ -48,7 +48,7 @@ const advisors = [
         name: "Sam Hajhashemi",
         bio: "Ph.D. in Neuroscience, expert in BCI signal processing and real-time neural decoding systems.",
         photo: "https://res.cloudinary.com/dp90xtgcp/image/upload/v1779031294/Sam-1_bduv7h.png",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/sam-hajhashemi-03227547/",
         active: false,
     },
     {
@@ -57,7 +57,7 @@ const advisors = [
         name: "Mikael Nybacka",
         bio: "Associate Professor at KTH Royal Institute of Technology specialising in vehicle dynamics and autonomous systems.",
         photo: "https://res.cloudinary.com/dp90xtgcp/image/upload/v1779031293/Mike_utibig.png",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/mikaelnybacka/",
         active: false,
     },
     {
@@ -66,7 +66,7 @@ const advisors = [
         name: "Pawel Herman",
         bio: "Associate Professor at KTH, leading researcher in computational neuroscience and cognitive modelling.",
         photo: "https://res.cloudinary.com/dp90xtgcp/image/upload/v1779031294/Pawel_gy8umw.png",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/pawel-herman-68520822/",
         active: false,
     },
 ];
