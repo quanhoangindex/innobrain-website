@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import BlurText from "../effects/BlurText";
 
 const IMG_EEG =
-    "https://www.figma.com/api/mcp/asset/1fe66f55-7611-4095-8eaa-2608634ba390";
+    "https://res.cloudinary.com/dp90xtgcp/image/upload/v1779133184/BgPlatformCTA_ejcqu8.png";
 
 const handleAnimationComplete = () => {
     console.log("Animation completed!");
