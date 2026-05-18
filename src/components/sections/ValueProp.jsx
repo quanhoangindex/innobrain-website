@@ -4,7 +4,6 @@ import Button from "../ui/Button";
 import { Check } from "lucide-react";
 import { motion } from "framer-motion";
 
-
 const checkItems = [
     "Reads cognitive state in under 200ms",
     "A.I Analyze in real time",
@@ -58,7 +57,9 @@ function ValueProp() {
                                 ease: "easeOut",
                             }}
                             viewport={{ once: true }}>
-                            <Button size="xl">Learn how it works</Button>
+                            <a href="#how-it-works">
+                                <Button size="xl">Learn how it works</Button>
+                            </a>
                         </motion.div>
                         <motion.ul
                             className="value-prop__checklist"

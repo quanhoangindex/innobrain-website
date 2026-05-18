@@ -35,7 +35,7 @@ const steps = [
 
 function HowItWorks() {
     return (
-        <section className="hiw">
+        <section className="hiw" id="how-it-works">
             <div className="hiw__inner">
                 {/* Label bar */}
                 <motion.div
